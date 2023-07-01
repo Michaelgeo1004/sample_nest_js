@@ -14,12 +14,7 @@ export class StudService {
 
         return this.studModel.findByPk(id)
     }
-    // // to PUT a data in DB
 
-    // async putstud(studDto: StudDto): Promise<SETS> {
-    //     return this.studModel.update(studDto)
-      
-    // }
     //  to POST a data in DB & to CREATE a data in DB @post
 
     async createStud(studDto: StudDto): Promise<SETS> {
