@@ -36,7 +36,7 @@ export class StudController {
     @Patch(':id')
     async upadatestud(@Param('id') id: number, @Body() studDto: StudDto): Promise<Array<SETS>> 
     {
-        // console.log(Array<SETS>);
+       
         return this.service.updateStud(id, studDto);
     }
     
