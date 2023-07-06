@@ -1,29 +1,29 @@
 import { InferAttributes, InferCreationAttributes } from "sequelize";
 import { Column, Model, Table } from "sequelize-typescript";
- 
 
-@Table({ tableName: "AGD" })
-export class SETS extends Model<InferCreationAttributes<SETS>, InferAttributes<SETS>>{
-    
-   
+@Table({ tableName: "Emp_Detail" })
+export class EDTS extends Model<InferCreationAttributes<EDTS>, InferAttributes<EDTS>>{
+
     @Column({ autoIncrement: true, primaryKey: true })
     id: number;
 
     @Column
-    Regno : number;
+    Emp_id: number;
+
 
     @Column
-    FirstName: string;
+    Emp_Name: String;
 
-    @Column
-    LastName: string;
 
     @Column
     Age: number;
 
-    @Column({ defaultValue: false })
+    @Column
+    Location: string;
+
+    @Column
+    BloodGroup: string;
     isDeleted: boolean;
 
-  
-
 }
+

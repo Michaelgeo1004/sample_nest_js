@@ -11,31 +11,31 @@ export class UsersController {
 
     }
 
-    @Post()
-    async createUser(@Body() userDto: UserDto): Promise<User> {
-        return this.service.createUser(userDto);
-    }
+    // @Post()
+    // async createUser(@Body() userDto: UserDto): Promise<User> {
+    //     return this.service.createUser(userDto);
+    // }
 
-    @Delete(':id')
+    // @Delete(':id')
     
-    async deleteUser(@Param('id',new ParseIntPipe()) id: number): Promise<void> {
-        return this.service.deleteUser(id);
-    }
+    // async deleteUser(@Param('id',new ParseIntPipe()) id: number): Promise<void> {
+    //     return this.service.deleteUser(id);
+    // }
 
-    @Get(':id')
-    async getByIDUser(@Param('id') id: number): Promise<User> {
-        return this.service.getByIdUser(id);
-    }
+    // @Get(':id')
+    // async getByIDUser(@Param('id') id: number): Promise<User> {
+    //     return this.service.getByIdUser(id);
+    // }
 
-    @Get()
-    async getAllUser(): Promise<User[]> {
-        return this.service.getAllUser();
-    }
+    // @Get()
+    // async getAllUser(): Promise<User[]> {
+    //     return this.service.getAllUser();
+    // }
 
-    @Patch(':id')
-    async upadateUser(@Param('id') id: number, @Body() userDto: UserDto): Promise<Array<User>> {
-        return this.service.updateUser(id, userDto);
-    }
+    // @Patch(':id')
+    // async upadateUser(@Param('id') id: number, @Body() userDto: UserDto): Promise<Array<User>> {
+    //     return this.service.updateUser(id, userDto);
+    // }
 
 
 

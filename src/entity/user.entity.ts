@@ -1,8 +1,6 @@
 import { InferAttributes, InferCreationAttributes } from "sequelize";
 import { Column, Model, Table } from "sequelize-typescript";
 
-
-
 @Table({ tableName: "users" })
 export class User extends Model<InferCreationAttributes<User>, InferAttributes<User>>{
 

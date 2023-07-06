@@ -1,4 +1,4 @@
-import { Delete, Injectable } from '@nestjs/common';
+import {  Injectable } from '@nestjs/common';
 import { StudDto } from './dto/stud.dto';
 import { SETS } from 'src/entity/stud.entity';
 import { InjectModel } from '@nestjs/sequelize';

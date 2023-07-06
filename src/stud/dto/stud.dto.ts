@@ -3,4 +3,5 @@ export class StudDto {
     Regno: number;
     FirstName: string;
     LastName: string;
+    Age:number;
 }
