@@ -1,7 +1,13 @@
+import { EETS } from "src/entity/emp.entity";
+
 export class updateEmpDetailsDto
 {
-    Emp_id : number;
-    Age :number;
-    Location:string;
-    BloodGroup:string;
+    id: number;
+    emp_code: string;
+    empDetail: EETS;
+    age: number;
+    location: string;
+    bloodGroup: string;
+    isDeleted: boolean;
+    deletedAt:Date;
 }

@@ -1,6 +1,7 @@
 import { InferAttributes, InferCreationAttributes } from "sequelize";
 import { Column, HasMany, Model, Table } from "sequelize-typescript";
 import { EDTS } from "./emp_details.entity";
+import { EODE } from "./emp_off_details.entity";
 
 @Table({ tableName: "Employees" })
 export class EETS extends Model<InferCreationAttributes<EETS>, InferAttributes<EETS>>{
@@ -9,13 +10,21 @@ export class EETS extends Model<InferCreationAttributes<EETS>, InferAttributes<E
     @Column({ autoIncrement: true, primaryKey: true })
     id: number;
 
-    @HasMany(() => EDTS)
-    emp:EDTS[];
+    @HasMany(() => EDTS, { as: 'edts' })
+    empDetail: EDTS[];
 
-    @Column({ primaryKey: true, allowNull: false, unique: true })
-    Emp_id: number;
+    @HasMany(() => EODE, { as: 'eode' })
+    empOff: EODE[];
+
+    @Column({ primaryKey: true })
+    emp_code: string;
 
     @Column
-    Emp_Name: string;
+    empName: string;
+
+    @Column({defaultValue:false})
     isDeleted: boolean;
+
+    @Column
+    deletedAt: Date;
 }

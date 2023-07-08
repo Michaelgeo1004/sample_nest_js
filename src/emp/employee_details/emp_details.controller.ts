@@ -3,6 +3,7 @@ import { EmpDetailsService } from './emp_details.service';
 import { EDTS } from 'src/entity/emp_details.entity';
 import { Emp_DetailsDto } from './dto/emp_details.dto';
 
+
 @Controller('emp_details')
 export class EmpDetailsController {
 
@@ -11,11 +12,12 @@ export class EmpDetailsController {
 
     @Get()
     async getallEmpdetail():Promise<EDTS[]>{
-        return this.service.getEmpdetail();
+        return this.service.getallEmpdetail();
     }
+    
 
     @Get(':id')
-    async getallempdetailById(@Param('id') id: number): Promise<EDTS> {
+    async getEmpdetailById(@Param('id') id: number): Promise<EDTS> {
         return this.service.getEmpdetailbyid(id);
     }
 

@@ -3,13 +3,18 @@ import { InjectModel } from '@nestjs/sequelize';
 import { EETS } from 'src/entity/emp.entity';
 import { EmpDto } from './dto/emp.dto';
 
+
 @Injectable()
 export class EmpService {
 
     constructor(@InjectModel(EETS) private empModel: typeof EETS) { }
 //GeT
     async getallEmp(): Promise<EETS []> {
-        return this.empModel.findAll();
+        return this.empModel.findAll(
+            {
+                include:[{association:'edts'},{ association:'eode'}]
+
+        });
     }
 //GeT by Id
     async getById(id: number): Promise<EETS> {

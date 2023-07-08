@@ -11,6 +11,7 @@ import { EmpModule } from './emp/emp.module';
 import { CustomersModule } from './customers/customers.module';
 
 
+
 @Module({
   imports: [SequelizeModule.forRoot(config),UsersModule, StudModule, AuthModule, SecurityModule, EmpModule, CustomersModule],
   controllers: [AppController],

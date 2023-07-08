@@ -17,6 +17,10 @@ export class EmpController {
     async getById(@Param('id') id: number): Promise<EETS> {
         return this.service.getById(id);
     }
+    // @Get(':emp_code')
+    // async getById(@Param('emp_code') emp_code: string): Promise<EETS> {
+    //     return this.service.getById(emp_code);
+    // }
 
     @Post()
     async createEmp(@Body() empDto: EmpDto): Promise<EETS> {

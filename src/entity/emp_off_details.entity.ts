@@ -9,19 +9,27 @@ export class EODE extends Model <InferCreationAttributes<EODE>,InferAttributes<E
     id:number
 
     @ForeignKey(() => EETS)
+    emp_id:number;
 
-    @Column({allowNull: false, unique: true })
-    Emp_id: number;  
+    @ForeignKey(() => EETS)
+    emp_code:string;
+
 
     @BelongsTo(() => EETS)
-    empdetail: EETS;
+    empOffdetail: EETS;
 
     @Column
-    Designation:string
+    designation:string
 
     @Column
-    Salary:Number
-    isDeleted: boolean
+    salary:Number
+
+
+    @Column({defaultValue:false})
+    isDeleted: boolean;
+
+    @Column
+    deletedAt: Date;
 
 
 } 

@@ -8,23 +8,26 @@ export class EDTS extends Model<InferCreationAttributes<EDTS>, InferAttributes<E
     @Column({ autoIncrement: true, primaryKey: true })
     id: number;
 
-    @ForeignKey(() => EETS)
-
-    @Column({allowNull: false, unique: true })
-    Emp_id: number;
+    @ForeignKey(()=>EETS)
+    emp_code: string;
 
     @BelongsTo(() => EETS)
-    empdetail: EETS;
+    empDetail: EETS;
 
     @Column
-    Age: number;
+    age: number;
 
     @Column
-    Location: string;
+    location: string;
 
     @Column
-    BloodGroup: string;
+    bloodGroup: string;
+
+    @Column({defaultValue:false})
     isDeleted: boolean;
+
+    @Column
+    deletedAt: Date;
 
 }
 

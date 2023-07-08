@@ -1,7 +1,12 @@
+import { EETS } from "src/entity/emp.entity";
+
 export class createEmpOffDetailsDto
 {
     id:number;
-    Emp_code:string;
-    Designation:string;
-    Salary:Number;
+    emp_code:string;
+    empOffdetail: EETS;
+    designation:string;
+    salary:Number;
+    isDeleted:boolean;
+    deletedAt:Date;
 }
