@@ -8,8 +8,8 @@ export class EODE extends Model <InferCreationAttributes<EODE>,InferAttributes<E
     @Column ({autoIncrement:true ,primaryKey:true})
     id:number
 
-    @ForeignKey(() => EETS)
-    emp_id:number;
+    // @ForeignKey(() => EETS)
+    // emp_id:number;
 
     @ForeignKey(() => EETS)
     emp_code:string;

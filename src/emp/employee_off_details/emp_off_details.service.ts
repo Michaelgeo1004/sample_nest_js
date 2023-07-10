@@ -9,12 +9,7 @@ export class EmpOffDetailService {
     constructor(@InjectModel(EODE) private empoffdetailModel: typeof EODE) { }
 //GeT
     async getallEmpOffDetail(): Promise<EODE []> {
-        return this.empoffdetailModel.findAll({
-            where:{
-                isDeleted:false
-            },
-            // include:{association:{}}
-        });
+        return this.empoffdetailModel.findAll();
     }
 //GeT by Id
     async getEmpOffDetailById(id: number): Promise<EODE> {

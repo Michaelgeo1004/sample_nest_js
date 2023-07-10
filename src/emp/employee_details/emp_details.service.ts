@@ -11,9 +11,7 @@ export class EmpDetailsService {
 
     //GeT    
     async getallEmpdetail(): Promise<EDTS[]> {
-        return this.empdetailModel.findAll({
-            include: { association: 'edts' }
-        });
+        return this.empdetailModel.findAll();
     }
     //PosT
     async createEmpdetail(emp_detailsDto: Emp_DetailsDto): Promise<EDTS> {

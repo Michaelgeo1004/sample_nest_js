@@ -10,10 +10,10 @@ export class EETS extends Model<InferCreationAttributes<EETS>, InferAttributes<E
     @Column({ autoIncrement: true, primaryKey: true })
     id: number;
 
-    @HasMany(() => EDTS, { as: 'edts' })
+    @HasMany(() => EDTS, { as: 'empdetail' })
     empDetail: EDTS[];
 
-    @HasMany(() => EODE, { as: 'eode' })
+    @HasMany(() => EODE, { as: 'empoffdetail' })
     empOff: EODE[];
 
     @Column({ primaryKey: true })

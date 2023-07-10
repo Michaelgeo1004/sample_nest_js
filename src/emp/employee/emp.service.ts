@@ -12,7 +12,7 @@ export class EmpService {
     async getallEmp(): Promise<EETS []> {
         return this.empModel.findAll(
             {
-                include:[{association:'edts'},{ association:'eode'}]
+                include:[{association:'empdetail'},{ association:'empoffdetail'}]
 
         });
     }
