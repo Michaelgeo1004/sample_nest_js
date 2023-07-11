@@ -14,7 +14,7 @@ export class ETET extends Model<InferCreationAttributes<ETET>, InferAttributes<E
     empName:string;
 
     @Column
-    age:number;
+    age:number; 
 
     @Column
     location:string;

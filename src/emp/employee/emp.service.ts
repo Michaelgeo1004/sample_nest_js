@@ -26,8 +26,8 @@ export class EmpService {
     }
 //PatcH by Id
     async updateEmp(id:number ,empDto:EmpDto):Promise<Array<EETS>>{
-        const dood=await this.empModel.update(empDto,{where:{id},returning:true});
-        return dood[1];
+        const update=await this.empModel.update(empDto,{where:{id},returning:true});
+        return update[1];
     }
 //DeletE by Id
     async deleteEmp(id:number):Promise<void>{
