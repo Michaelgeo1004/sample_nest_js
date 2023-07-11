@@ -9,12 +9,15 @@ import { EmpDetailsService } from './employee_details/emp_details.service';
 import { EmpDetailsController } from './employee_details/emp_details.controller';
 import { EmpOffDetailService } from './employee_off_details/emp_off_details.service';
 import { EmpOffDetailsController } from './employee_off_details/emp_off_details.controller';
+import { ETET } from 'src/entity/emp_table.entity';
+import { EmptableService } from 'src/emptable/emptable.service';
+import { EmptableController } from 'src/emptable/emptable.controller';
 
 
 @Module({
-  providers: [EmpService, EmpOffDetailService,EmpDetailsService],
-  controllers: [EmpController,EmpDetailsController, EmpOffDetailsController],
-  imports:[SequelizeModule.forFeature([EDTS,EODE,EETS])]
+  providers: [EmpService, EmpOffDetailService,EmpDetailsService,EmptableService],
+  controllers: [EmpController,EmpDetailsController, EmpOffDetailsController,EmptableController],
+  imports:[SequelizeModule.forFeature([EDTS,EODE,EETS,ETET])]
 
 })
 export class EmpModule {}

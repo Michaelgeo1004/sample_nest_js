@@ -9,11 +9,12 @@ import { AuthModule } from './auth/auth.module';
 import { SecurityModule } from './security/security.module';
 import { EmpModule } from './emp/emp.module';
 import { CustomersModule } from './customers/customers.module';
+import { EmptableModule } from './emptable/emptable.module';
 
 
 
 @Module({
-  imports: [SequelizeModule.forRoot(config),UsersModule, StudModule, AuthModule, SecurityModule, EmpModule, CustomersModule],
+  imports: [SequelizeModule.forRoot(config),UsersModule, StudModule, AuthModule, SecurityModule, EmpModule, CustomersModule, EmptableModule],
   controllers: [AppController],
   providers: [AppService],
 })

@@ -1,7 +1,8 @@
 import { InferAttributes, InferCreationAttributes } from "sequelize";
-import { Column, HasMany, Model, Table } from "sequelize-typescript";
+import { BelongsTo, Column, HasMany, Model, Table } from "sequelize-typescript";
 import { EDTS } from "./emp_details.entity";
 import { EODE } from "./emp_off_details.entity";
+import { OneToOne } from "typeorm";
 
 @Table({ tableName: "Employees" })
 export class EETS extends Model<InferCreationAttributes<EETS>, InferAttributes<EETS>>{
@@ -16,6 +17,7 @@ export class EETS extends Model<InferCreationAttributes<EETS>, InferAttributes<E
     @HasMany(() => EODE, { as: 'empoffdetail' })
     empOff: EODE[];
 
+  
     @Column({ primaryKey: true })
     emp_code: string;
 
