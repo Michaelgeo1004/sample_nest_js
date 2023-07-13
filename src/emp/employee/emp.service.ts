@@ -12,6 +12,8 @@ export class EmpService {
     async getallEmp(): Promise<EETS []> {
         return this.empModel.findAll(
             {
+                
+                where:{isDeleted:false },
                 include:[{association:'empdetail'},{ association:'empoffdetail'}]
 
         });

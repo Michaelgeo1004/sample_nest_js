@@ -8,7 +8,11 @@ export class EmptableService {
     constructor(@InjectModel(ETET) private emptableModel: typeof ETET) { }
 //GeT
     async getallEmp(): Promise<ETET []> {
-        return this.emptableModel.findAll();
+        return this.emptableModel.findAll(
+            {
+                where:{isDeleted:false }
+            }
+        );
     }
 //GeT by Id
     async getById(id: number): Promise<ETET> {

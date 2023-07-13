@@ -11,7 +11,11 @@ export class EmpDetailsService {
 
     //GeT    
     async getallEmpdetail(): Promise<EDTS[]> {
-        return this.empdetailModel.findAll();
+        return this.empdetailModel.findAll(
+            {
+                where:{isDeleted:false }
+            }
+        );
     }
     //PosT
     async createEmpdetail(emp_detailsDto: Emp_DetailsDto): Promise<EDTS> {
