@@ -7,6 +7,7 @@ import { OneToOne } from "typeorm";
 @Table({ tableName: "Employees" })
 export class EETS extends Model<InferCreationAttributes<EETS>, InferAttributes<EETS>>{
 
+    george
 
     @Column({ autoIncrement: true, primaryKey: true })
     id: number;
